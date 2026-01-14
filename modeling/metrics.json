@@ -1,27 +1,37 @@
-# ============================================================
-# Cross-Validation Results (5-Fold)
-# ============================================================
-# Fold 1: QWK=0.998 | Macro-F1=0.998 | BalAcc=0.998 | MAE_ord=0.003
-# Fold 2: QWK=1.000 | Macro-F1=1.000 | BalAcc=1.000 | MAE_ord=0.000
-# Fold 3: QWK=0.998 | Macro-F1=0.998 | BalAcc=0.998 | MAE_ord=0.003
-# Fold 4: QWK=0.998 | Macro-F1=0.998 | BalAcc=0.998 | MAE_ord=0.003
-# Fold 5: QWK=1.000 | Macro-F1=1.000 | BalAcc=1.000 | MAE_ord=0.000
-#
-# -------------------------------
-# Averages (mean ± std):
-# QWK      = 0.999 ± 0.001
-# Macro-F1 = 0.999 ± 0.001
-# BalAcc   = 0.999 ± 0.001
-# MAE_ord  = 0.002 ± 0.001
-#
-# -------------------------------
-# Overall OOF Metrics:
-# QWK=0.999 | Macro-F1=0.999 | BalAcc=0.999 | MAE_ord=0.002
-#
-# Confusion matrix [Low, Moderate, High]:
-# [[ 297    0    0]
-#  [   0  674    0]
-#  [   0    3 1026]]
-#
-# Conclusion: No leakage, no overfitting, tested and concluded a triviallly solvable dataset
-# ============================================================
+{
+  "cross_validation": {
+    "n_folds": 5,
+    "folds": [
+      { "fold": 1, "qwk": 0.998, "macro_f1": 0.998, "balanced_accuracy": 0.998, "mae_ord": 0.003 },
+      { "fold": 2, "qwk": 1.0, "macro_f1": 1.0, "balanced_accuracy": 1.0, "mae_ord": 0.0 },
+      { "fold": 3, "qwk": 0.998, "macro_f1": 0.998, "balanced_accuracy": 0.998, "mae_ord": 0.003 },
+      { "fold": 4, "qwk": 0.998, "macro_f1": 0.998, "balanced_accuracy": 0.998, "mae_ord": 0.003 },
+      { "fold": 5, "qwk": 1.0, "macro_f1": 1.0, "balanced_accuracy": 1.0, "mae_ord": 0.0 }
+    ],
+    "averages_mean_std": {
+      "qwk": { "mean": 0.999, "std": 0.001 },
+      "macro_f1": { "mean": 0.999, "std": 0.001 },
+      "balanced_accuracy": { "mean": 0.999, "std": 0.001 },
+      "mae_ord": { "mean": 0.002, "std": 0.001 }
+    }
+  },
+  "oof_metrics": {
+    "qwk": 0.999,
+    "macro_f1": 0.999,
+    "balanced_accuracy": 0.999,
+    "mae_ord": 0.002
+  },
+  "confusion_matrix": {
+    "labels": ["Low", "Moderate", "High"],
+    "matrix": [
+      [297, 0, 0],
+      [0, 674, 0],
+      [0, 3, 1026]
+    ]
+  },
+  "conclusion": {
+    "no_leakage": true,
+    "no_overfitting": true,
+    "notes": "Tested and concluded a trivially solvable dataset."
+  }
+}

@@ -13,7 +13,7 @@ from lightgbm import LGBMRegressor, early_stopping, log_evaluation
 from huggingface_hub import hf_hub_download
 
 train_data = hf_hub_download(
-        repo_id="Carson-Shively/uber-fares",
+        repo_id="Carson-Shively/student-lifestyle",
         filename="data/gold/gold.parquet",
         repo_type="dataset",
         revision="main",

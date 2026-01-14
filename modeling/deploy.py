@@ -9,7 +9,7 @@ from huggingface_hub import hf_hub_download
 
 train_data = hf_hub_download(
         repo_id="Carson-Shively/student-lifestyle",
-        filename="data/gold/gold_uf.parquet",
+        filename="data/gold/gold.parquet",
         repo_type="dataset",
         revision="main",
     )
